@@ -18,4 +18,6 @@ Then run `vagrant up`.
 
 
 ## Usage
+VM uses private ip 192.168.20.100
+
 TODO
