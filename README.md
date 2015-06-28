@@ -18,6 +18,23 @@ Then run `vagrant up`.
 
 
 ## Usage
+
 VM uses private ip 192.168.20.100
 
+# Go App
+```
+export GOPATH=/path/to/this/repo/app
+```
+
+# PostgreSQL
+PG Studio: [http://192.168.20.100:8080/](http://192.168.20.100:8080/)
+Database host: 192.168.20.100
+Port: 5432
+Username: postgres
+Password: postgres
+
+# Mongo
+TODO
+
+# RethinkDB
 TODO

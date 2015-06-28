@@ -1,49 +1,10 @@
-volumes:
-    image: ./postgres
-    volumes:
-        - "/var/lib/postgresql"
-    command: bin/true           
-#        - "/var/staging:/srv/staging"
-# docker run -d -v /var/lib/mysql -name data-mysql --enterypoint /bin/echo mysql data-only container for mysql
-
-
 postgres:
   build: ./postgres
   ports:
     - "5432:5432"
-  volumes_from:
-    - volumes
 
 pgstudio:
   image: lukasmartinelli/pgstudio
   ports:
     - "8080:8080"
 
-
-
-# flaskapp:
-#   build: ./flask-app
-#   command: "python hello.py"
-#   links:
-#     - postgres
-#   volumes:
-#     - /vagrant/flask-app/src:/opt/flask-app
-
-# djangoapp:
-#   build: ./django-app
-#   command: "python manage.py runserver 0.0.0.0:80"
-#   links:
-#     - postgres
-#     - flaskapp
-#   volumes:
-#     - /vagrant/django-app/src:/opt/django-app
-
-# proxy:
-#   build: ./proxy
-#   ports:
-#     - "80:80"
-#   volumes:
-#     - /vagrant/proxy/sites-enabled:/etc/nginx/sites-enabled
-#   links:
-#     - flaskapp
-#     - djangoapp

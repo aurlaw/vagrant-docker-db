@@ -1,1 +1,7 @@
 temp
+.vagrant
+app/bin
+app/pkg
+/app/src/party
+/app/src/golang.org
+/app/src/github.com
